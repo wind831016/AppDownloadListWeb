@@ -15,19 +15,52 @@
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
 
+    <!-- Javascript -->
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
 </head>
 <body>
     <div class="heard-custom">
-        <label></label>
+        <label>AppDownloadListWeb</label>
     </div>
     <div>
-        <div></div>
-        <div>
+        <div class="navbar navbar-expand-md navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand navbar-brand-custom" href="javascript:void(0);">AppDownloadListWeb</a>
+
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">AppDownloadListWeb</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body .offcanvas-body-custom">
+                        <ul class="nav nav-underline navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+
+                        <form class="d-flex form-custom" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div>
             下灰底
 
             福底
 
-        </div> 
+        </div>*@ 
     </div>
 </body>
 </html>
