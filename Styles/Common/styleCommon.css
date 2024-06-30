@@ -1,0 +1,89 @@
+﻿:root {
+
+    /* Primary: Seasoned Apple Green */
+    --primary-100: #F9FFF2;
+    --primary-200: #E0FEB5;
+    --primary-300: #C9F675;
+    --primary-400: #AEE035;
+    --primary-500: #8BB500;
+    --primary-600: #789100;
+    --primary-700: #616E00;
+    --primary-800: #464A00;
+    --primary-900: #262600;
+
+    /* Accent: Rose Red */
+    --accent-100: #FFF2F3;
+    --accent-200: #FEBFC5;
+    --accent-300: #F88A9A;
+    --accent-400: #E85372;
+    --accent-500: #C9204D;
+    --accent-600: #A10B3C;
+    --accent-700: #78022F;
+    --accent-800: #4F0023;
+    --accent-900: #260013;
+
+    /* Neutral */
+    --neutral-100: #FBFCFA;
+    --neutral-200: #E8EAE5;
+    --neutral-300: #D5D7D1;
+    --neutral-400: #C2C5BD;
+    --neutral-500: #B0B3AA;
+    --neutral-600: #8D8F86;
+    --neutral-700: #6B6C64;
+    --neutral-800: #484943;
+    --neutral-900: #262622;
+}
+
+body {
+    background: var(--neutral-100);
+    border: 4px solid var(--neutral-100);
+    border-radius: 6px;
+    box-shadow: 0 0px 1px var(--neutral-400), 0 2px 4px var(--neutral-500), 0 10px 6px var(--neutral-300);
+    align-items: center;
+}
+
+.heard-custom {
+    display: ruby-text;
+}
+
+.heard-custom label {
+    color: var(--neutral-600);
+    font-size: 0.7em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.35em 0px 0.5em;
+}
+
+.navbar-custom {
+    background: linear-gradient(to right, var(--primary-600), var(--primary-400));
+    color: var(--neutral-100);
+    height: 6em;
+    gap: 0.5em;
+    padding: 1em 1em 3em;
+}
+
+.navbar-brand-custom {
+    color: var(--neutral-100);
+}
+
+    .navbar-brand-custom:hover {
+        color: var(--neutral-100);
+    }
+
+    .navbar-brand-custom:active {
+        color: var(--neutral-100);
+    }
+
+    .navbar-brand-custom:visited {
+        color: var(--neutral-100);
+    }
+
+    .navbar-brand-custom:focus {
+        color: var(--neutral-100);
+    }
+
+.btn-custom {
+    color: var(--primary-500);
+    border-color: #CEC8D4;
+}

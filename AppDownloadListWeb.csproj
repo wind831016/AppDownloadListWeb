@@ -202,6 +202,7 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Styles\Common\styleCommon.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -222,8 +223,7 @@
     <Folder Include="Controllers\Common\" />
     <Folder Include="Image\" />
     <Folder Include="Models\" />
-    <Folder Include="Sytles\Common\" />
-    <Folder Include="Sytles\Home\" />
+    <Folder Include="Styles\Home\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
