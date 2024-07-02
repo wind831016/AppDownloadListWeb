@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>App DownloadListWeb</title>
+    <title>AppDownloadListWeb</title>
 
     <!-- Styles -->
     @*<link rel="icon" type="~/Image/ico" sizes="32x32" href="~/Image/favicon.ico" />*@
@@ -16,51 +16,49 @@
     <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
 
     <!-- Javascript -->
-    <script src="~/Scripts/jquery-3.7.1.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="heard-custom">
         <label>AppDownloadListWeb</label>
     </div>
-    <div>
-        <div class="navbar navbar-expand-md navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand navbar-brand-custom" href="javascript:void(0);">AppDownloadListWeb</a>
-
-                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+    <div class="mx-2">
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#">AppDownloadListWeb</a>
+                <button class="navbar-toggler btn-icon-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                    <div class="offcanvas-header">
+                <div class="offcanvas offcanvas-end" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header border-bottom offcanvas-header-sm">
                         <h5 class="offcanvas-title" id="offcanvasLabel">AppDownloadListWeb</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button class="btn-close btn-icon-custom" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body .offcanvas-body-custom">
-                        <ul class="nav nav-underline navbar-nav flex-grow-1">
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline nav-link-md flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" href="#">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Link</a>
-                            </li>
+                            </li>                      
                         </ul>
-
-                        <form class="d-flex form-custom" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <form class="d-flex marginTop-sm" role="search">
+                            <input class="form-control form-control-custom form-control-shadow me-2" placeholder="Search" aria-label="Search">
                         </form>
                     </div>
+
                 </div>
             </div>
+        </nav>
+    </div>
+    <div class="mx-2">
+        <div class="container-gray-custom">
+
         </div>
-        @*<div>
-            下灰底
-
-            福底
-
-        </div>*@ 
     </div>
 </body>
 </html>
