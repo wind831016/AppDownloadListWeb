@@ -1,43 +1,131 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppDownloadListWeb</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Styles -->
+    @*<link rel="icon" type="~/Image/ico" sizes="32x32" href="~/Image/favicon.ico" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
+    <link rel="stylesheet" href="~/Styles/Shared/styleLayout.css" />
+
+    <!-- Bootstrap JS -->
+    <!-- Javascript -->
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("關於", "About", "Home")</li>
-                    <li>@Html.ActionLink("連絡人", "Contact", "Home")</li>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-airy">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img src="~/Image/logo.png" alt="MyAppStore Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")" href="@Url.Action("Index", "Home")">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "App" && ViewContext.RouteData.Values["action"].ToString() == "Index" ? "active" : "")" href="@Url.Action("Index", "App")">SHOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Category" ? "active" : "")" href="@Url.Action("Index", "Category")">TEMPLATE</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">DROPDOWN</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><h6 class="dropdown-header">Dropdown header</h6></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Category" ? "active" : "")" href="@Url.Action("Index", "Category")">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Category" ? "active" : "")" href="@Url.Action("Index", "Category")">DOCS</a>
+                    </li>
                 </ul>
+
+                <div class="d-flex align-items-center justify-content-between justify-content-lg-end mt-1 mb-2 my-lg-0">
+                    <!-- Search Button-->
+                    <div class="nav-item navbar-icon-link" data-bs-toggle="search">
+                        <a class="nav-link" href="@Url.Action("Index", "Account")">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="nav-item navbar-icon-link" data-bs-toggle="search">
+                        <a class="nav-link" href="@Url.Action("Index", "Account")">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
-        </footer>
-    </div>
+    </nav>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- 主內容 -->
+    <main class="container" role="main">
+        @RenderBody()
+    </main>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-title">關於我們</h4>
+                    <a href="#" class="footer-link">公司簡介</a>
+                    <a href="#" class="footer-link">聯繫我們</a>
+                    <a href="#" class="footer-link">隱私政策</a>
+                    <a href="#" class="footer-link">服務條款</a>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">開發者</h4>
+                    <a href="#" class="footer-link">開發者中心</a>
+                    <a href="#" class="footer-link">上傳應用</a>
+                    <a href="#" class="footer-link">開發者政策</a>
+                    <a href="#" class="footer-link">開發者論壇</a>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">支援</h4>
+                    <a href="#" class="footer-link">幫助中心</a>
+                    <a href="#" class="footer-link">常見問題</a>
+                    <a href="#" class="footer-link">反饋</a>
+                    <a href="#" class="footer-link">系統需求</a>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">關注我們</h4>
+                    <div class="social-links">
+                        <a href="#" class="footer-link"><i class="fab fa-facebook mr-1"></i> Facebook</a>
+                        <a href="#" class="footer-link"><i class="fab fa-twitter mr-1"></i> Twitter</a>
+                        <a href="#" class="footer-link"><i class="fab fa-instagram mr-1"></i> Instagram</a>
+                        <a href="#" class="footer-link"><i class="fab fa-youtube mr-1"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; @DateTime.Now.Year &ensp; TouchFish. &ensp; 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

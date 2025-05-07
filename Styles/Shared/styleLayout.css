@@ -1,0 +1,105 @@
+﻿/* styleLayout.css - 專用樣式 */
+
+/* 導航欄樣式 */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+    .navbar-brand img {
+        width: -webkit-fill-available;
+        margin: 0 0.5rem;
+    }
+
+.navbar-airy .navbar-nav .nav-link {
+    font-weight: 700;
+}
+
+.navbar-airy .navbar-icon-link {
+    margin: 0 0.5rem;
+}
+
+/* 通用容器 */
+.search-input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #dadce0;
+    border-radius: 24px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+    .search-input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+    }
+
+/* 頁腳樣式 */
+.footer {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 1px solid #dadce0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-evenly; /*會讓 flex 容器內的元素平均分布，左右兩側與元素之間的間距相等。*/
+    flex-wrap: wrap; /*讓 flex 容器內的子元素在空間不足時自動換行，而不是壓縮在同一行內。*/
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    display: block;
+    color: #5f6368;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+    .footer-link:hover {
+        color: #1a73e8;
+    }
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #dadce0;
+    text-align: center;
+    font-size: 12px;
+    color: #5f6368;
+}
+
+@media (min-width: 1200px) {
+    .navbar-airy .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .navbar-icon-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        width: 15%;
+    }
+}

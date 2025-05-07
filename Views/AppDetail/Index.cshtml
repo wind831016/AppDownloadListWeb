@@ -1,35 +1,264 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>App DownloadListWeb</title>
+﻿@{
+    ViewData["Title"] = "詳細資訊";
+}
 
-    <!-- Styles -->
-    @*<link rel="icon" type="~/Image/ico" sizes="32x32" href="~/Image/favicon.ico" />*@
-    <link rel="stylesheet" href="~/Content/bootstrap.css" />
-    <link rel="stylesheet" href="~/Styles/Home/styleIndex.css" />
+<link rel="stylesheet" href="~/Styles/AppDetail/styleIndex.css" />
 
-</head>
-<body>
-    <div class="navbar">
-        <div class="container">
-            <a class="">Container</a>
-            <div class="">
-                <ul class="">
-                    <li class="">
-                        <a class="">Home</a>
-                    </li>
-                    <li class="">
-                        <a class="">Link</a>
-                    </li>
-                </ul>
-                <form role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </form>
+<div class="hero-section">
+    <div class="section">
+        <div class="section-inner">
+            <div class="section-item" style="background-image: url('/Image/section.png');">
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+<div class="hero-info">
+    <div class="row">
+        <div class="mx-auto mb-5">
+            <h3>Pandora: Music & Podcasts</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="rating-container">
+            <div class="rating-stars-container">
+                <h3 id="ratingContainer_rating-value">3.5</h3>
+
+                <svg width="0" height="0">
+                    <!-- 定義半顆星的剪裁區域 -->
+                    <defs>
+                        <linearGradient id="halfGradient">
+                            <stop offset="50%" stop-color="#495057" />
+                            <stop offset="50%" stop-color="transparent" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div id="ratingContainer_rating-stars" class="star-container score_star" data-score="3.5"></div>
+                <p class="text-muted text-sm mb-1">2.8M &nbsp; reviews</p>
+            </div>
+
+            <div class="rating-barChart-container">
+                <div class="barChart-item">
+                    <span class="barChart-label">5</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 50%;"></div>
+                    </div>
+                    <span class="percentage">50%</span>
+                </div>
+                <div class="barChart-item">
+                    <span class="barChart-label">4</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 25%;"></div>
+                    </div>
+                    <span class="percentage">25%</span>
+                </div>
+                <div class="barChart-item">
+                    <span class="barChart-label">3</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 10%;"></div>
+                    </div>
+                    <span class="percentage">10%</span>
+                </div>
+                <div class="barChart-item">
+                    <span class="barChart-label">2</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 5%;"></div>
+                    </div>
+                    <span class="percentage">5%</span>
+                </div>
+                <div class="barChart-item">
+                    <span class="barChart-label">1</span>
+                    <div class="bar-container">
+                        <div class="bar" style="width: 10%;"></div>
+                    </div>
+                    <span class="percentage">10%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tags-container">
+            <span>Music</span>
+            <span>Entertainment</span>
+            <span>Lifestyle</span>
+            <span>Podcasts</span>
+        </div>
+    </div>
+</div>
+
+<div class="hero-tabs">
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="active" onclick="openTab(event, 'overview')">Overview</button>
+            <button onclick="openTab(event, 'reviews')">Reviews</button>
+            <button onclick="openTab(event, 'requirements')">Requirements</button>
+            <button onclick="openTab(event, 'support')">Support</button>
+        </div>
+        <div id="overview" class="tab-content active">
+            <h3>Overview</h3>
+            <p>
+                挖掘、戰鬥、探險、建造！在這個動作感十足的冒險遊戲裡，沒有不可能的事。這世界是畫板，而這片大地本身就是您的顏料！
+                <br>
+                拿起你的工具並出發吧！製作武器來擊退各種敵人。挖到地底深處來取得配件，金錢，和很多其他非常有用的東西。收集資源來創造在您擁有的世界裡的所有東西。蓋個房子，堡壘，或甚至一座城堡。人們會搬到那裏，說不定還會賣您各式各樣的能協助您冒險的工具呢。
+                但小心，還有更多的挑戰在等著您... 您準備好接受任務了嗎？
+            </p>
+            <p class="highlight-title">重點特色：</p>
+            <ul class="highlight-list">
+                <li>沙盒（Sandbox）遊戲模式</li>
+                <li>隨機建立的遊戲世界</li>
+                <li>免費的內容更新</li>
+            </ul>
+        </div>
+        <div id="reviews" class="tab-content">
+            <div class="row review-container">
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="~/Image/Carousel/slide02.png" alt="User Avatar">
+                        <div class="review-date">DEC 2018</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-name">Han Solo</div>
+                        <div class="rating-stars-container">
+                            <svg width="0" height="0">
+                                <!-- 定義半顆星的剪裁區域 -->
+                                <defs>
+                                    <linearGradient id="halfGradient">
+                                        <stop offset="50%" stop-color="#495057" />
+                                        <stop offset="50%" stop-color="transparent" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div id="reviewContent_rating-stars_01" class="star-container score_star" data-score="0"></div>
+                        </div>
+                        <p class="review-text">
+                            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections
+                        </p>
+
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">
+                        <img src="~/Image/Carousel/slide01.png" alt="User Avatar">
+                        <div class="review-date">Jan 2019</div>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-name">Luke Skywalker</div>
+                        <div class="rating-stars-container">
+                            <svg width="0" height="0">
+                                <!-- 定義半顆星的剪裁區域 -->
+                                <defs>
+                                    <linearGradient id="halfGradient">
+                                        <stop offset="50%" stop-color="#495057" />
+                                        <stop offset="50%" stop-color="transparent" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div id="reviewContent_rating-stars_02" class="star-container score_star" data-score="1.5"></div>
+                        </div>
+                        <p class="review-text">
+                            The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="requirements" class="tab-content">
+            <h3>Requirements</h3>
+            <p>相關應用與推薦...</p>
+        </div>
+        <div id="support" class="tab-content">
+            <h3>Support</h3>
+            <p>技術支持與常見問題...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* stars */
+    function generateStar(type) {
+        return `
+                    <svg class="star-svg ${type}" viewBox="0 0 24 24">
+                        <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"
+                            stroke-linejoin="round" />
+                    </svg>
+                `;
+    }
+
+    function displayRating(rating, idNM) {
+        const starsContainer = document.getElementById(idNM);
+        starsContainer.innerHTML = ""; // 清空舊的星星
+
+        let fullStars = Math.floor(rating);
+        let hasHalfStar = rating % 1 !== 0;
+        let totalStars = 5;
+
+        for (let i = 0; i < fullStars; i++) {
+            starsContainer.innerHTML += generateStar("full");
+        }
+
+        if (hasHalfStar) {
+            starsContainer.innerHTML += generateStar("half");
+        }
+
+        let remainingStars = totalStars - fullStars - (hasHalfStar ? 1 : 0);
+        for (let i = 0; i < remainingStars; i++) {
+            starsContainer.innerHTML += generateStar("empty");
+        }
+    }
+
+    function displayRating1(rating, dom) {
+        $(dom).empty();
+
+        let fullStars = Math.floor(rating);
+        let hasHalfStar = rating % 1 !== 0;
+        let totalStars = 5;
+
+        for (let i = 0; i < fullStars; i++) {
+            $(dom).append(generateStar("full"));
+        }
+
+        if (hasHalfStar) {
+            $(dom).append(generateStar("half"));
+        }
+
+        let remainingStars = totalStars - fullStars - (hasHalfStar ? 1 : 0);
+        for (let i = 0; i < remainingStars; i++) {
+            $(dom).append(generateStar("empty"));
+        }
+    }
+
+    // 取得當前評分並顯示
+    let ratingContainer_ratingValue = parseFloat(document.getElementById("ratingContainer_rating-value").innerText);
+    //displayRating(ratingContainer_ratingValue, "ratingContainer_rating-stars");
+
+    $(function () {
+        $('.score_star').each(function (i, v) {
+            let rating = parseFloat($(this).data('score'));
+            displayRating1(rating, $(this));
+        })
+    })
+    
+
+    /* review-container stars */
+    let reviewContainer_ratingValue_01 = parseFloat(document.getElementById("reviewContent_rating-value_01").innerText);
+    //displayRating(reviewContainer_ratingValue_01, "reviewContent_rating-stars_01");
+
+    let reviewContainer_ratingValue_02 = parseFloat(document.getElementById("reviewContent_rating-value_02").innerText);
+    //displayRating(reviewContainer_ratingValue_02, "reviewContent_rating-stars_02");
+
+    /* tabs */
+    function openTab(evt, tabName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByTagName("button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>

@@ -141,10 +141,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AppDetail\AppDetailController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IViewModel.cs" />
+    <Compile Include="Interface\ViewBlock.cs" />
+    <Compile Include="Models\View\ViewBlock.cs" />
+    <Compile Include="Models\View\Home\Index.cs" />
+    <Compile Include="Models\View\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,12 +174,32 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\Carousel\slide01.png" />
+    <Content Include="Image\Carousel\slide02.png" />
+    <Content Include="Image\Carousel\slide03.png" />
+    <Content Include="Image\Carousel\slide04.png" />
+    <Content Include="Image\Carousel\slide05.png" />
+    <Content Include="Image\Carousel\slide06.png" />
+    <Content Include="Image\Carousel\slide07.png" />
+    <Content Include="Image\Carousel\slide08.png" />
+    <Content Include="Image\Carousel\slide09.png" />
+    <Content Include="Image\Carousel\slide11.png" />
+    <Content Include="Image\Carousel\slide12.png" />
+    <Content Include="Image\Carousel\slide13.png" />
+    <Content Include="Image\Icon\next.svg" />
+    <Content Include="Image\Icon\prev.svg" />
+    <Content Include="Image\Icon\search.svg" />
+    <Content Include="Image\logo.png" />
+    <Content Include="Image\section.png" />
+    <Content Include="Image\section02.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Common\owl.carousel.js" />
+    <Content Include="Scripts\Common\owl.carousel2.thumbs.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -284,6 +311,11 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Styles\AppDetail\styleIndex.css" />
+    <Content Include="Styles\Common\styleOwlCarousel.css" />
+    <Content Include="Styles\Home\styleIndex.css" />
+    <Content Include="Styles\Shared\styleLayout2.css" />
+    <Content Include="Styles\Shared\styleLayout.css" />
     <Content Include="Styles\Common\styleCommon.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -311,11 +343,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\AppDetail\" />
     <Folder Include="Controllers\Common\" />
-    <Folder Include="Image\" />
-    <Folder Include="Models\" />
-    <Folder Include="Styles\Home\" />
+    <Folder Include="Views\AppList\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,64 +1,333 @@
 ﻿@{
-    Layout = null;
+    ViewData["Title"] = "首頁";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AppDownloadListWeb</title>
+<link rel="stylesheet" href="~/Styles/Home/styleIndex.css" />
+<link rel="stylesheet" href="~/Styles/Common/styleOwlCarousel.css" />
 
-    <!-- Styles -->
-    @*<link rel="icon" type="~/Image/ico" sizes="32x32" href="~/Image/favicon.ico" />*@
-    <link rel="stylesheet" href="~/Content/bootstrap.css" />
-    <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
-
-    <!-- Javascript -->
-    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="heard-custom">
-        <label>AppDownloadListWeb</label>
-    </div>
-    <div class="mx-2">
-        <nav class="navbar navbar-expand-md navbar-custom">
-            <div class="container">
-                <a class="navbar-brand" href="#">AppDownloadListWeb</a>
-                <button class="navbar-toggler btn-icon-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="offcanvas offcanvas-end" id="offcanvas" aria-labelledby="offcanvasLabel">
-                    <div class="offcanvas-header border-bottom offcanvas-header-sm">
-                        <h5 class="offcanvas-title" id="offcanvasLabel">AppDownloadListWeb</h5>
-                        <button class="btn-close btn-icon-custom" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav nav-underline nav-link-md flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>                      
-                        </ul>
-                        <form class="d-flex marginTop-sm" role="search">
-                            <input class="form-control form-control-custom form-control-shadow me-2" placeholder="Search" aria-label="Search">
-                        </form>
-                    </div>
-
-                </div>
+<div class="hero-section">
+    <div class="section">
+        <div class="section-inner">
+            <div class="section-item" style="background-image: url('/Image/section.png');">
             </div>
-        </nav>
-    </div>
-    <div class="mx-2">
-        <div class="container-gray-custom">
-
         </div>
     </div>
-</body>
-</html>
+</div>
+
+<div class="hero-carousel">
+    <div class="row">
+        <div class="col-xl-8 mx-auto text-center mb-5">
+            <h3>熱門推薦</h3>
+        </div>
+
+        <div class="owl-carousel owl-theme style-carousel product-carousel">
+            
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide01.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Fitness</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">健康塑身</a></h3>
+                        <span class="text-muted">
+                            3.4 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide02.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Tool</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">生活氣象</a></h3>
+                        <span class="text-muted">
+                            4.1 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide03.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Maps</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">公車路線</a></h3>
+                        <span class="text-muted">
+                            4.7 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide04.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Medical</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">用藥提醒</a></h3>
+                        <span class="text-muted">
+                            4.8 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide05.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Game</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">積木益智</a></h3>
+                        <span class="text-muted">
+                            4.4 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide06.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Tool</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">時鐘</a></h3>
+                        <span class="text-muted">
+                            3.9 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide07.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Pet</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">寵物</a></h3>
+                        <span class="text-muted">
+                            4.6 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide08.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Communication</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">聊天室</a></h3>
+                        <span class="text-muted">
+                            3.6 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide09.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2">
+                        <p class="text-muted text-sm mb-1">Tool</p>
+                        <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">行事曆</a></h3>
+                        <span class="text-muted">
+                            4.7 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-section">
+    <div class="section">
+        <div class="section-inner">
+            <div class="section-item" style="background-image: url('/Image/section02.png');">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero-carousel">
+    <div class="row">
+        <div class="col-xl-8 mx-auto text-center mb-5">
+            <h3>最新上架</h3>
+        </div>
+
+        <div class="owl-carousel owl-theme style-carousel banner-carousel">
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide11.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2 app-info">
+                        <div class="app-icon">
+                            <img src="~/Image/Carousel/slide21.png" alt="icon">
+                        </div>
+                        <div class="app-details">
+                            <p class="text-muted text-sm mb-1">Trip</p>
+                            <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">旅遊</a></h3>
+                            <span class="text-muted">
+                                4.1 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide12.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2 app-info">
+                        <div class="app-icon">
+                            <img src="~/Image/Carousel/slide02.png" alt="icon">
+                        </div>
+                        <div class="app-details">
+                            <p class="text-muted text-sm mb-1">Tool</p>
+                            <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">生活氣象</a></h3>
+                            <span class="text-muted">
+                                4.1 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="style-carousel-item">
+                <div class="product">
+                    <div class="product-image">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img class="img-fluid" src="~/Image/Carousel/slide13.png" alt="product">
+                        </a>
+                    </div>
+                    <div class="py-2 app-info">
+                        <div class="app-icon">
+                            <img src="~/Image/Carousel/slide05.png" alt="icon">
+                        </div>
+                        <div class="app-details">
+                            <p class="text-muted text-sm mb-1">Game</p>
+                            <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">積木益智</a></h3>
+                            <span class="text-muted">
+                                4.4 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Common/owl.carousel.js"></script>
+<script src="~/Scripts/Common/owl.carousel2.thumbs.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".product-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 8
+                }
+            }
+        });
+
+        $(".banner-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
