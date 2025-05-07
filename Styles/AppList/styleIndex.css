@@ -1,0 +1,103 @@
+﻿/* banner */
+
+.hero-section {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.section {
+    position: relative;
+}
+
+.section-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin-right: -100%;
+    float: left;
+}
+
+/* carousel */
+
+.hero-carousel {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.product {
+    margin-bottom: 1.5rem;
+}
+
+    .product .product-image {
+        position: relative;
+        border-bottom: 2px solid #f8f9fa;
+    }
+
+        .product .product-image:hover {
+            border-bottom: 2px solid #495057;
+        }
+
+        .product .product-image img {
+            border-radius: 10px;
+        }
+
+    .product .text-muted svg {
+        margin-top: -5px;
+    }
+
+.banner-carousel .product .product-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+    .banner-carousel .product .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.banner-carousel .product .app-info {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+
+.banner-carousel .product .app-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .banner-carousel .product .app-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.banner-carousel .product .app-details {
+    flex-grow: 1;
+}
+
+@media (max-width: 991.98px) {
+    /* carousel */
+
+    .style-carousel {
+        position: relative;
+    }
+
+        .style-carousel .style-carousel-item {
+            margin-left: 0.8rem;
+            margin-right: 0.8rem;
+        }
+}
