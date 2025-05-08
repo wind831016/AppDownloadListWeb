@@ -89,6 +89,64 @@
     flex-grow: 1;
 }
 
+.hero-list-carousel {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+    .hero-list-carousel .tab-container {
+        display: flex;
+        margin-bottom: 20px;
+        overflow-x: auto;
+    }
+
+        .hero-list-carousel .tab-container .tab {
+            padding: 8px 16px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 10px;
+            cursor: pointer;
+            white-space: nowrap;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+            .hero-list-carousel .tab-container .tab.active {
+                background: #495057;
+                color: #e9ecef;
+            }
+
+.list-carousel .app-info {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+}
+
+    .list-carousel .app-info .app-rank {
+        margin-right: 12px;
+        width: 20px;
+        text-align: center;
+    }
+
+    .list-carousel .app-info .app-icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 12px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .list-carousel .app-info .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    .list-carousel .app-info .app-details {
+        flex-grow: 1;
+    }
 @media (max-width: 991.98px) {
     /* carousel */
 
@@ -97,6 +155,15 @@
     }
 
         .style-carousel .style-carousel-item {
+            margin-left: 0.8rem;
+            margin-right: 0.8rem;
+        }
+
+    .style-list-carousel {
+        position: relative;
+    }
+
+        .style-list-carousel .style-carousel-item {
             margin-left: 0.8rem;
             margin-right: 0.8rem;
         }
