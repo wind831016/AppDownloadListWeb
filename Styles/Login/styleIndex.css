@@ -20,14 +20,13 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
     .hero-login .left-panel {
         position: relative;
         width: 50%;
-        background: linear-gradient(to bottom, #F5F5F5, #FFFFFF);
-        color: white;
+        background: #5f6368; 
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -37,10 +36,30 @@ body {
     }
         .hero-login .left-panel .star {
             position: absolute;
-            background-color: red;
+            background-color: #FFFFFF;
             border-radius: 50%;
             animation: twinkle 3s infinite;
         }
+
+        .hero-login .left-panel .shooting-star {
+            position: absolute;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            opacity: 0;
+            animation: shoot 4s linear infinite;
+        }
+
+            .hero-login .left-panel .shooting-star::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20px;
+                height: 1px;
+                background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+                transform: rotate(-45deg);
+                transform-origin: right;
+            }
 
         .hero-login .left-panel .cloud {
             position: absolute;
@@ -52,7 +71,7 @@ body {
         .hero-login .left-panel .cloud-top {
             width: 120%;
             height: 120%;
-            bottom: 45%;
+            bottom: 20%;
             transform: translate(-50%, 50%);
             animation-duration: 8s;
             z-index: 1;
@@ -60,8 +79,8 @@ body {
 
         .hero-login .left-panel .cloud-middle {
             width: 120%;
-            height: 120%;
-            bottom: 10%; 
+            height: 100%;
+            bottom: 0%; 
             transform: translate(-50%, 50%);
             animation-duration: 6s;
             animation-delay: 1s;
@@ -71,14 +90,169 @@ body {
         .hero-login .left-panel .cloud-bottom {
             width: 130%;
             height: 120%;
-            bottom: 10%; 
+            bottom: 0%; 
             transform: translate(-50%, 50%);
             animation-duration: 7s;
             animation-delay: 0.5s;
             z-index: 3;
         }
 
+        .hero-login .left-panel .welcome-text {
+            text-align: center;
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero-login .left-panel h1 {
+            color: #FFFFFF;
+        }
+
+        .hero-login .left-panel p {
+            color: #FFFFFF;
+            opacity: 0.8;
+        }
+
+    .hero-login .right-panel {
+        width: 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .hero-login .right-panel .greeting {
+            margin-bottom: 20px;
+        }
+
+            .hero-login .right-panel .greeting h2 {
+                margin-bottom: 5px;
+            }
+
+            .hero-login .right-panel .greeting p {
+                color: #888888;
+                font-weight: bold;
+            }
+
+        .hero-login .right-panel .form-title {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .hero-login .right-panel .input-group {
+            margin-bottom: 20px;
+        }
+
+            .hero-login .right-panel .input-group input {
+                width: 100%;
+                padding: 10px 0;
+                border: none;
+                border-bottom: 1px solid #CCCCCC;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+                .hero-login .right-panel .input-group input:focus {
+                    border-color: #000000;
+                }
+
+        .hero-login .right-panel .checkbox-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .hero-login .right-panel .checkbox-group .style-checkbox {
+                cursor: pointer;
+                width: 18px;
+                height: 18px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid #CCCCCC;
+                border-radius: 3px;
+                outline: none;
+                position: relative;
+                vertical-align: middle;
+            }
+
+                .hero-login .right-panel .checkbox-group .style-checkbox:checked {
+                    background-color: #000000;
+                    border-color: #000000;
+                }
+
+                    .hero-login .right-panel .checkbox-group .style-checkbox:checked::after {
+                        content: "✓";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #FFFFFF;
+                        font-size: 12px;
+                    }
+
+            .hero-login .right-panel .checkbox-group label {
+                color: #666666;
+                cursor: pointer;
+                padding-left: 10px;
+            }
+
+            .hero-login .right-panel .checkbox-group .forgot-password {
+                color: #666666;
+            }
+
+                .hero-login .right-panel .checkbox-group .forgot-password a {
+                    color: #666666;
+                    text-decoration: none;
+                }
+
+                    .hero-login .right-panel .checkbox-group .forgot-password a:hover {
+                        text-decoration: underline;
+                    }
+
+        .hero-login .right-panel .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .hero-login .right-panel .submit-btn:hover {
+                background-color: #000000;
+                color: #FFFFFF;
+                border: none;
+                border: 1px solid #000000;
+            }
+
+
+        .hero-login .right-panel .create-account {
+            margin-top: 20px;
+            text-align: center;
+            color: #666666;
+        }
+
+            .hero-login .right-panel .create-account a {
+                color: #666666;
+                text-decoration: none;
+            }
+
+                .hero-login .right-panel .create-account a:hover {
+                    text-decoration: underline;
+                }
+
 /* 動畫樣式 */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
 @keyframes sway {
     0%, 100% {
         transform: translate(-50%, 50%);
@@ -86,6 +260,22 @@ body {
 
     50% {
         transform: translate(calc(-50% + 20px), 50%);
+    }
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0; 
+    }
+
+    10% {
+        opacity: 1; 
+    }
+
+    100% {
+        transform: translate(-100px, 100px);
+        opacity: 0;
     }
 }
 
@@ -117,14 +307,13 @@ body {
 
             .hero-login .left-panel .cloud-middle {
                 width: 100%;
-                height: 20%;
-                bottom: 95%;
+                height: 10%;
+                bottom: 80%;
             }
 
             .hero-login .left-panel .cloud-bottom {
                 width: 110%;
-                height: 50%;
-                bottom: 90%;
+                bottom: 50%;
             }
 }
 
@@ -144,6 +333,5 @@ body {
         .hero-login .left-panel .cloud-bottom {
             width: 110%;
             max-width: 600px;
-            bottom: 100%;
         }
 }

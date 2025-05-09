@@ -45,10 +45,38 @@
                 <div class="cloud cloud-bottom">
                     <img class="img-fluid" src="~/Image/Cloud/01.svg" alt="Cloud">
                 </div>
+
+                <div class="welcome-text">
+                    <h1>Welcome Page</h1>
+                    <p>Sign In To Your Account</p>
+                </div>
             </div>
 
             <div class="right-panel">
+                <div class="greeting">
+                    <h2>Hello !</h2>
+                    <p id="timeGreeting">Good Morning</p>
+                </div>
+                <p class="form-title">Login Your Account</p>
 
+                <div class="input-group">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="remember" class="style-checkbox">
+                        <label for="remember">Remember</label>
+                    </div>
+                    
+                    <a href="#" class="forgot-password">Forgot Password ?</a>
+                </div>
+
+                <button class="submit-btn">SUBMIT</button>
+                <a href="#" class="create-account">Create Account</a>
             </div>
         </div>
     </main>
@@ -65,7 +93,8 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         generateStars(25);
-        //generateShootingStars(5);
+        generateShootingStars(5);
+        setTimeBasedGreeting();
     });
 
     function generateStars(count) {
@@ -75,10 +104,10 @@
             const star = document.createElement('div');
             star.className = 'star';
 
-            const top = Math.random() * 50 + 5; // 5-55%
-            const left = Math.random() * 90 + 5; // 5-95%
+            const top = Math.random() * 50 + 5;     // 5-55%
+            const left = Math.random() * 90 + 5;    // 5-95%
 
-            const size = Math.random() * 2 + 1; // 1-3px
+            const size = Math.random() * 2 + 1;     // 1-3px
 
             const delay = Math.random() * 3; 
 
@@ -91,5 +120,73 @@
             starsContainer.appendChild(star);
         }
 
+    }
+
+    function generateShootingStars(count) {
+        const shootingStarsContainer = document.getElementById('shooting-stars-container');
+
+        for (let i = 0; i < count; i++) {
+            const minDistance = 20; 
+            const positions = [];
+
+            let top, left;
+            let validPosition = false;
+            let attempts = 0;
+
+            while (!validPosition && attempts < 50) {
+
+                top = Math.random() * 50 + 5;  // 5-55%
+                left = Math.random() * 90 + 5; // 5-95%
+
+                validPosition = true;
+
+                for (let j = 0; j < positions.length; j++) {
+                    const distance = Math.sqrt(
+                        Math.pow(top - positions[j].top, 2) +
+                        Math.pow(left - positions[j].left, 2)
+                    );
+
+                    if (distance < minDistance) {
+                        validPosition = false;
+                        break;
+                    }
+                }
+
+                attempts++;
+
+            }
+
+            if (validPosition) {
+                positions.push({ top, left });
+
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
+
+                const delay = Math.random() * 5 + i * 2;
+
+                shootingStar.style.top = top + '%';
+                shootingStar.style.left = left + '%';
+                shootingStar.style.animationDelay = delay + 's';
+
+                shootingStarsContainer.appendChild(shootingStar);
+            }
+        }
+    }
+
+    function setTimeBasedGreeting() {
+        const hour = new Date().getHours();
+        let greeting;
+
+        if (hour >= 5 && hour < 12) {
+            greeting = "Good Morning";
+        } else if (hour >= 12 && hour < 17) {
+            greeting = "Good Afternoon";
+        } else if (hour >= 17 && hour < 21) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good night";
+        }
+
+        document.getElementById('timeGreeting').textContent = greeting;
     }
 </script>
