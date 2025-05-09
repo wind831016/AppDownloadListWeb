@@ -143,6 +143,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AppDetail\AppDetailController.cs" />
     <Compile Include="Controllers\AppList\AppListController.cs" />
+    <Compile Include="Controllers\BackstageHome\BackstageHomeController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
@@ -321,7 +322,7 @@
     <Content Include="Styles\Common\styleOwlCarousel.css" />
     <Content Include="Styles\Home\styleIndex.css" />
     <Content Include="Styles\Login\styleIndex.css" />
-    <Content Include="Styles\Shared\styleLayout2.css" />
+    <Content Include="Styles\Shared\styleLayout_Backstage.css" />
     <Content Include="Styles\Shared\styleLayout.css" />
     <Content Include="Styles\Common\styleCommon.css" />
     <Content Include="Web.config" />
@@ -350,10 +351,12 @@
     <Content Include="Views\AppList\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_Backstage.cshtml" />
+    <Content Include="Views\BackstageHome\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Common\" />
+    <Folder Include="Styles\BackstageHome\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
