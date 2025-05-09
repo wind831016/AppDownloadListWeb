@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "首頁";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppDownloadListWeb</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Styles -->
+    @*<link rel="icon" type="~/Image/ico" sizes="32x32" href="~/Image/favicon.ico" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
+    <link rel="stylesheet" href="~/Styles/Login/styleIndex.css" />
+
+    <!-- Bootstrap JS -->
+    <!-- Javascript -->
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <!-- 主內容 -->
+    <main class="container" role="main">
+        <div class="hero-login">
+            <div class="left-panel">
+
+                <div id="stars-container"></div>
+                <div id="shooting-stars-container"></div>
+
+                <div class="cloud cloud-top">
+                    <img class="img-fluid" src="~/Image/Cloud/03.svg" alt="Cloud">
+                </div>
+                <div class="cloud cloud-middle">
+                    <img class="img-fluid" src="~/Image/Cloud/02.svg" alt="Cloud">
+                </div>
+                <div class="cloud cloud-bottom">
+                    <img class="img-fluid" src="~/Image/Cloud/01.svg" alt="Cloud">
+                </div>
+            </div>
+
+            <div class="right-panel">
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year &ensp; TouchFish. &ensp; 版權所有。</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        generateStars(25);
+        //generateShootingStars(5);
+    });
+
+    function generateStars(count) {
+        const starsContainer = document.getElementById('stars-container');
+
+        for (let i = 0; i < count; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+
+            const top = Math.random() * 50 + 5; // 5-55%
+            const left = Math.random() * 90 + 5; // 5-95%
+
+            const size = Math.random() * 2 + 1; // 1-3px
+
+            const delay = Math.random() * 3; 
+
+            star.style.top = top + '%';
+            star.style.left = left + '%';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.animationDelay = delay + 's';
+
+            starsContainer.appendChild(star);
+        }
+
+    }
+</script>
