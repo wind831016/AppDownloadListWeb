@@ -204,6 +204,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Common\searchInteraction.js" />
     <Content Include="Scripts\Common\owl.carousel.js" />
     <Content Include="Scripts\Common\owl.carousel2.thumbs.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -319,6 +320,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Styles\AppDetail\styleIndex.css" />
     <Content Include="Styles\AppList\styleIndex.css" />
+    <Content Include="Styles\Common\styleSearch.css" />
     <Content Include="Styles\Common\styleOwlCarousel.css" />
     <Content Include="Styles\Home\styleIndex.css" />
     <Content Include="Styles\Login\styleIndex.css" />

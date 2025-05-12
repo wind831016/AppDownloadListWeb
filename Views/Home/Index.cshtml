@@ -5,35 +5,40 @@
 <link rel="stylesheet" href="~/Styles/Home/styleIndex.css" />
 <link rel="stylesheet" href="~/Styles/Common/styleOwlCarousel.css" />
 
-<div class="hero-section">
-    <div class="section">
-        <div class="section-inner">
-            <div class="section-item" style="background-image: url('/Image/section.png');">
+<!-- 頂部橫幅 -->
+<section class="hero-section">
+    <div class="container-fluid px-lg-4">
+        <div class="section">
+            <div class="section-inner">
+                <div class="section-item" style="background-image: url('/Image/section.png');">
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="hero-carousel">
-    <div class="row">
-        <div class="col-xl-8 mx-auto text-center mb-5">
-            <h3>熱門推薦</h3>
+<!-- 熱門推薦輪播 -->
+<section class="hero-carousel">
+    <div class="container-fluid px-lg-4">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-12 mx-auto text-center mb-4">
+                <h3 class="section-title">熱門推薦</h3>
+            </div>
         </div>
 
         <div class="owl-carousel owl-theme style-carousel product-carousel">
-            
             <div class="style-carousel-item">
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide01.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide01.png" alt="健康塑身" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Fitness</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">健康塑身</a></h3>
                         <span class="text-muted">
-                            3.4 
+                            3.4
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -45,14 +50,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide02.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide02.png" alt="生活氣象" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Tool</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">生活氣象</a></h3>
                         <span class="text-muted">
-                            4.1 
+                            4.1
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -64,14 +69,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide03.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide03.png" alt="公車路線" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Maps</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">公車路線</a></h3>
                         <span class="text-muted">
-                            4.7 
+                            4.7
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -83,14 +88,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide04.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide04.png" alt="用藥提醒" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Medical</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">用藥提醒</a></h3>
                         <span class="text-muted">
-                            4.8 
+                            4.8
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -102,14 +107,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide05.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide05.png" alt="積木益智" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Game</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">積木益智</a></h3>
                         <span class="text-muted">
-                            4.4 
+                            4.4
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -121,14 +126,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide06.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide06.png" alt="時鐘" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Tool</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">時鐘</a></h3>
                         <span class="text-muted">
-                            3.9 
+                            3.9
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -140,14 +145,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide07.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide07.png" alt="寵物" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Pet</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">寵物</a></h3>
                         <span class="text-muted">
-                            4.6 
+                            4.6
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -159,14 +164,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide08.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide08.png" alt="聊天室" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Communication</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">聊天室</a></h3>
                         <span class="text-muted">
-                            3.6 
+                            3.6
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -178,14 +183,14 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide09.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide09.png" alt="行事曆" loading="lazy">
                         </a>
                     </div>
-                    <div class="py-2">
+                    <div class="product-info py-2 px-2">
                         <p class="text-muted text-sm mb-1">Tool</p>
                         <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">行事曆</a></h3>
                         <span class="text-muted">
-                            4.7 
+                            4.7
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                             </svg>
@@ -195,21 +200,27 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="hero-section">
-    <div class="section">
-        <div class="section-inner">
-            <div class="section-item" style="background-image: url('/Image/section02.png');">
+<!-- 中間橫幅 -->
+<section class="hero-section">
+    <div class="container-fluid px-lg-4">
+        <div class="section">
+            <div class="section-inner">
+                <div class="section-item" style="background-image: url('/Image/section02.png');">
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="hero-carousel">
-    <div class="row">
-        <div class="col-xl-8 mx-auto text-center mb-5">
-            <h3>最新上架</h3>
+<!-- 最新上架輪播 -->
+<section class="hero-carousel">
+    <div class="container-fluid px-lg-4">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-12 mx-auto text-center mb-4">
+                <h3 class="section-title">最新上架</h3>
+            </div>
         </div>
 
         <div class="owl-carousel owl-theme style-carousel banner-carousel">
@@ -217,18 +228,18 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide11.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide11.png" alt="旅遊" loading="lazy">
                         </a>
                     </div>
                     <div class="py-2 app-info">
                         <div class="app-icon">
-                            <img src="~/Image/Carousel/slide21.png" alt="icon">
+                            <img src="~/Image/Carousel/slide21.png" alt="旅遊圖標" loading="lazy">
                         </div>
                         <div class="app-details">
                             <p class="text-muted text-sm mb-1">Trip</p>
                             <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">旅遊</a></h3>
                             <span class="text-muted">
-                                4.1 
+                                4.1
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                 </svg>
@@ -241,18 +252,18 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide12.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide12.png" alt="生活氣象" loading="lazy">
                         </a>
                     </div>
                     <div class="py-2 app-info">
                         <div class="app-icon">
-                            <img src="~/Image/Carousel/slide02.png" alt="icon">
+                            <img src="~/Image/Carousel/slide02.png" alt="生活氣象圖標" loading="lazy">
                         </div>
                         <div class="app-details">
                             <p class="text-muted text-sm mb-1">Tool</p>
                             <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">生活氣象</a></h3>
                             <span class="text-muted">
-                                4.1 
+                                4.1
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                 </svg>
@@ -265,18 +276,18 @@
                 <div class="product">
                     <div class="product-image">
                         <a href="@Url.Action("Index", "Home")">
-                            <img class="img-fluid" src="~/Image/Carousel/slide13.png" alt="product">
+                            <img class="img-fluid" src="~/Image/Carousel/slide13.png" alt="積木益智" loading="lazy">
                         </a>
                     </div>
                     <div class="py-2 app-info">
                         <div class="app-icon">
-                            <img src="~/Image/Carousel/slide05.png" alt="icon">
+                            <img src="~/Image/Carousel/slide05.png" alt="積木益智圖標" loading="lazy">
                         </div>
                         <div class="app-details">
                             <p class="text-muted text-sm mb-1">Game</p>
                             <h3 class="h6 text-uppercase mb-1"><a class="text-dark" href="detail.html">積木益智</a></h3>
                             <span class="text-muted">
-                                4.4 
+                                4.4
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                 </svg>
@@ -287,7 +298,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <script src="~/Scripts/Common/owl.carousel.js"></script>
 <script src="~/Scripts/Common/owl.carousel2.thumbs.js"></script>
@@ -296,17 +307,34 @@
     $(document).ready(function () {
         $(".product-carousel").owlCarousel({
             loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
+            margin: 15,
+            nav: true,
+            navText: [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>'
+            ],
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 2,
+                    margin: 10,
+                    nav: false
                 },
-                600: {
-                    items: 4
+                576: {
+                    items: 3,
+                    margin: 10
                 },
-                1000: {
+                768: {
+                    items: 4,
+                    margin: 12
+                },
+                992: {
+                    items: 6
+                },
+                1200: {
                     items: 8
                 }
             }
@@ -314,17 +342,27 @@
 
         $(".banner-carousel").owlCarousel({
             loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
+            margin: 20,
+            nav: true,
+            navText: [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>'
+            ],
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    margin: 10,
+                    nav: false
                 },
-                600: {
-                    items: 2
+                576: {
+                    items: 2,
+                    margin: 15
                 },
-                1000: {
+                992: {
                     items: 3
                 }
             }

@@ -1,8 +1,22 @@
-﻿/* banner */
+﻿/* 全局變量 */
+:root {
+    --primary-color: #000000;
+    --primary-color-light: #333333;
+    --primary-color-dark: #000000;
+    --secondary-color: #666666;
+    --border-color: #CCCCCC;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --hover-color: #333333;
+    --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+}
 
+/* banner */
 .hero-section {
-    margin-top: 20px;
-    margin-bottom: 60px;
+    margin-top: 1.25rem; 
+    margin-bottom: 3.75rem;
 }
 
 .section {
@@ -19,27 +33,34 @@
     height: 300px;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
+    border-radius: var(--border-radius); 
     overflow: hidden;
     width: 100%;
     margin-right: -100%;
     float: left;
+    transition: transform 0.3s ease;
 }
 
 /* carousel */
-
 .hero-carousel {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.875rem;
 }
 
 .product {
     margin-bottom: 1.5rem;
+    transition: var(--transition);
 }
+
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
 
     .product .product-image {
         position: relative;
         border-bottom: 2px solid #f8f9fa;
+        overflow: hidden;
     }
 
         .product .product-image:hover {
@@ -47,7 +68,13 @@
         }
 
         .product .product-image img {
-            border-radius: 10px;
+            border-radius: var(--border-radius); 
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .product .product-image:hover img {
+            transform: scale(1.05);
         }
 
     .product .text-muted svg {
@@ -67,16 +94,17 @@
 
 .banner-carousel .product .app-info {
     display: flex;
-    padding: 12px;
+    padding: 0.75rem; 
     align-items: center;
 }
 
 .banner-carousel .product .app-icon {
     width: 80px;
     height: 80px;
-    margin-right: 12px;
-    border-radius: 10px;
+    margin-right: 0.75rem; 
+    border-radius: var(--border-radius);
     overflow: hidden;
+    flex-shrink: 0;
 }
 
     .banner-carousel .product .app-icon img {
@@ -87,17 +115,86 @@
 
 .banner-carousel .product .app-details {
     flex-grow: 1;
+    overflow: hidden;
 }
 
-@media (max-width: 991.98px) {
+    .banner-carousel .product .app-details h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+/* 輪播項目樣式 */
+.style-carousel {
+    position: relative;
+}
+
+    .style-carousel .style-carousel-item {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+/* 分隔線 */
+.section-divider {
+    margin: 3rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* RWD 斷點處理 */
+
+/* 大屏幕（桌面） */
+@media (max-width: 992px) {
     /* carousel */
 
+    /*
     .style-carousel {
         position: relative;
     }
+    */
 
         .style-carousel .style-carousel-item {
             margin-left: 0.8rem;
             margin-right: 0.8rem;
         }
+}
+
+/* 中等屏幕（平板橫屏） */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .style-carousel .style-carousel-item {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .banner-carousel .product .product-image {
+        height: 300px;
+    }
+}
+
+/* 小屏幕（手機橫屏, 平板豎屏）*/
+@media (max-width: 767.98px) {
+
+    .banner-carousel .product .product-image {
+        height: 250px;
+    }
+
+    .banner-carousel .product .app-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 讓 banner 在小屏幕上自適應高度 */
+    .section-item {
+        height: 200px;
+    }
+}
+
+/* 超小屏幕（手機） */
+@media (max-width: 575.98px) {
+    .banner-carousel .product .product-image {
+        height: 200px;
+    }
+
+    .hero-section {
+        margin-bottom: 2rem;
+    }
 }
