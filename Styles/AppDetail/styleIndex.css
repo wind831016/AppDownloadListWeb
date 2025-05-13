@@ -4,275 +4,276 @@
     margin-bottom: 40px;
 }
 
-.section-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
+    .hero-section .section-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
 
-.section-item {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    width: 100%;
-}
-
-/* App Title */
-.app-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
+        .hero-section .section-inner .section-item {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            width: 100%;
+        }
 
 /* Hero Info Section */
 .hero-info {
     margin-bottom: 40px;
 }
 
-.rating-stars-container h3 {
-    margin-bottom: 0;
-    font-weight: 900;
-    font-size: 2rem;
-}
+    .hero-info .rating-stars-container h3 {
+        margin-bottom: 0;
+        font-weight: 900;
+        font-size: 2rem;
+    }
 
 /* Star Rating Styles */
-.star-container {
-    display: flex;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-    .star-container .star-svg {
-        width: 24px;
-        height: 24px;
-        stroke: var(--primary-color);
-        stroke-width: 2;
-    }
-
-    .star-container .full {
-        fill: var(--primary-color);
-    }
-
-    .star-container .half {
-        fill: url(#halfGradient);
-    }
-
-    .star-container .empty {
-        fill: transparent;
-    }
-
-/* Bar Chart Styles */
-.barChart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.barChart-label {
-    width: 20px;
-    text-align: right;
-    margin-right: 10px;
-}
-
-.bar-container {
-    flex: 1;
-    background-color: var(--border-color);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.bar {
-    height: 10px;
-    background-color: var(--primary-color);
-}
-
-.percentage {
-    width: 40px;
-    text-align: right;
-    margin-left: 10px;
-}
-
-/* Tags */
-.tags-container {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-    .tags-container span {
-        background: var(--primary-color);
-        color: var(--light-color);
-        padding: 5px 10px;
-        border-radius: 20px;
-        display: inline-block;
+    .hero-info .rating-container .rating-stars-container .star-container {
+        display: flex;
+        font-size: 1.5rem;
         margin-bottom: 5px;
     }
+
+        .hero-info .rating-container .rating-stars-container .star-container .star-svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-color);
+            stroke-width: 2;
+        }
+
+        .hero-info .rating-container .rating-stars-container .star-container .full {
+            fill: var(--primary-color);
+        }
+
+        .hero-info .rating-container .rating-stars-container .star-container .half {
+            fill: url(#halfGradient);
+        }
+
+        .hero-info .rating-container .rating-stars-container .star-container .empty {
+            fill: transparent;
+        }
+
+    /* Bar Chart Styles */
+    .hero-info .rating-container .rating-barChart-container .barChart-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+        .hero-info .rating-container .rating-barChart-container .barChart-item .barChart-label {
+            width: 20px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .hero-info .rating-container .rating-barChart-container .barChart-item .bar-container {
+            flex: 1;
+            background-color: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+            .hero-info .rating-container .rating-barChart-container .barChart-item .bar-container .bar {
+                height: 10px;
+                background-color: var(--primary-color);
+            }
+
+        .hero-info .rating-container .rating-barChart-container .barChart-item .percentage {
+            width: 40px;
+            text-align: right;
+            margin-left: 10px;
+        }
+
+/* Tags */
+    .hero-info .tags-container {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+        .hero-info .tags-container span {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
 
 /* Tabs */
 .hero-tabs {
     margin-bottom: 60px;
 }
 
-.tabs-container .tabs {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    border-bottom: 1.5px solid var(--border-color);
-    margin-bottom: 15px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; 
-}
-
-    .tabs-container .tabs::-webkit-scrollbar {
-        display: none; 
+    .hero-tabs .tabs-container .tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        border-bottom: 1.5px solid var(--border-color);
+        margin-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
 
-    .tabs-container .tabs button {
-        background: none;
-        border: none;
-        color: var(--light-text);
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-        white-space: nowrap;
-        border-bottom: 2px solid transparent;
-    }
-
-        .tabs-container .tabs button:hover {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
+        .hero-tabs .tabs-container .tabs::-webkit-scrollbar {
+            display: none;
         }
 
-        .tabs-container .tabs button.active {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
+        .hero-tabs .tabs-container .tabs button {
+            background: none;
+            border: none;
+            color: var(--light-text);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
         }
 
-.tabs-container .tab-content {
-    display: none;
-    padding: 5px 0;
-}
+            .hero-tabs .tabs-container .tabs button:hover {
+                color: var(--primary-color);
+                border-bottom: 2px solid var(--primary-color);
+            }
 
-    .tabs-container .tab-content.active {
-        display: block;
+            .hero-tabs .tabs-container .tabs button.active {
+                color: var(--primary-color);
+                border-bottom: 2px solid var(--primary-color);
+            }
+
+    .hero-tabs .tabs-container .tab-content {
+        display: none;
+        padding: 5px 0;
     }
 
-    .tabs-container .tab-content h3 {
+        .hero-tabs .tabs-container .tab-content.active {
+            display: block;
+        }
+
+    .hero-tabs .tabs-container .tab-content h3 {
         padding-top: 10px;
         padding-bottom: 15px;
         font-weight: bold;
     }
 
-    .tabs-container .tab-content .highlight-title {
+    .hero-tabs .tabs-container .tab-content .highlight-title {
         font-weight: bold;
         margin-top: 15px;
         margin-bottom: 8px;
     }
 
-    .tabs-container .tab-content .highlight-list {
+    .hero-tabs .tabs-container .tab-content .highlight-list {
         margin-left: 20px;
         list-style-type: disc;
     }
 
-/* Reviews */
-.review-container {
-    padding: 0;
-    margin: 20px 0;
-}
-
-.review-item {
-    display: flex;
-    flex-direction: column;
-    background: var(--white);
-    padding: 15px;
-    border-radius: var(--border-radius);
-    margin-bottom: 15px;
-    box-shadow: var(--shadow);
-}
-
-.review-avatar {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-    .review-avatar img {
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 2px solid var(--secondary-color);
-        margin: 0 auto;
+    /* Reviews */
+    .hero-tabs .tab-content .review-container {
+        padding: 0;
+        margin: 20px 0;
     }
 
-.review-date {
-    font-size: 12px;
-    color: var(--light-grey);
-    margin-top: 5px;
-}
+        .hero-tabs .tab-content .review-container .review-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--light-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+        }
 
-.review-content {
-    flex: 1;
-}
+            .hero-tabs .tab-content .review-container .review-item .review-avatar {
+                text-align: center;
+                margin-bottom: 15px;
+            }
 
-.review-name {
-    font-weight: bold;
-    font-size: 18px;
-}
+                .hero-tabs .tab-content .review-container .review-item .review-avatar img {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 2px solid var(--secondary-color);
+                    margin: 0 auto;
+                }
 
-.review-container .rating-stars-container {
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-    margin-bottom: 10px;
-}
+                .hero-tabs .tab-content .review-container .review-item .review-avatar .review-date {
+                    font-size: 12px;
+                    color: var(--light-grey);
+                    margin-top: 5px;
+                }
 
-.review-container .star-svg {
-    width: 15px;
-    height: 15px;
-    stroke: var(--primary-color);
-    stroke-width: 2;
-}
+            .hero-tabs .tab-content .review-container .review-item .review-content {
+                flex: 1;
+            }
 
-.review-text {
-    font-size: 14px;
-    color: var(--dark-grey);
-    margin: 10px 0;
-}
+                .hero-tabs .tab-content .review-container .review-item .review-content .review-name {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                .hero-tabs .tab-content .review-container .review-item .review-content .rating-stars-container {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 5px;
+                    margin-bottom: 10px;
+                }
+
+                .hero-tabs .tab-content .review-container .review-item .review-content .star-svg {
+                    width: 15px;
+                    height: 15px;
+                    stroke: var(--primary-color);
+                    stroke-width: 2;
+                }
+
+                .hero-tabs .tab-content .review-container .review-item .review-content .review-text {
+                    font-size: 14px;
+                    color: var(--dark-grey);
+                    margin: 10px 0;
+                }
 
 /* Responsive styles for tablets and up */
 
 /* Large screens */
 @media (min-width: 992px) {
-    .section-item {
+    .hero-section .section-inner .section-item {
         height: 350px;
     }
 }
 
-
 @media (min-width: 768px) {
-    .section-item {
+    .hero-section .section-inner .section-item {
         height: 300px;
     }
 
-    .star-container .star-svg {
+    .hero-info .rating-container .rating-stars-container .star-container .star-svg {
         width: 30px;
         height: 30px;
     }
 
-    .review-item {
+    .hero-tabs .tab-content .review-container .review-item {
         flex-direction: row;
         padding: 20px;
     }
 
-    .review-avatar {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-
-        .review-avatar img {
-            width: 80px;
-            height: 80px;
+        .hero-tabs .tab-content .review-container .review-item .review-avatar {
+            margin-right: 20px;
+            margin-bottom: 0;
         }
+
+            .hero-tabs .tab-content .review-container .review-item .review-avatar img {
+                width: 80px;
+                height: 80px;
+            }
+}
+
+/* Mobile styles - Center stars for mobile view */
+@media (max-width: 768px) {
+    .hero-info .rating-container .rating-stars-container .star-container {
+        justify-content: center;
+        margin: 1.5rem auto;
+    }
 }
