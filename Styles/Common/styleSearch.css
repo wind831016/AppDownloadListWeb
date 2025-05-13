@@ -10,6 +10,7 @@
     background-color: rgba(255, 255, 255, 0.98);
     z-index: 1001;
     display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 15px;
@@ -26,15 +27,26 @@
     animation: slide-up 0.3s forwards;
 }
 
-@keyframes slide-up {
-    to {
-        transform: translateY(0);
-    }
+/* 搜尋 banner */
+.search-banner {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+    .search-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
 /* 搜尋輸入框 */
 .search-input {
     width: 100%;
+    max-width: none;
     padding: 15px 50px 15px 20px;
     border: none;
     border-bottom: 2px solid #000;
@@ -93,10 +105,22 @@
         transform: rotate(90deg);
     }
 
+/* 動畫效果 */
+@keyframes slide-up {
+    to {
+        transform: translateY(0);
+    }
+}
+
 /* RWD 調整 */
 @media (max-width: 767.98px) {
     .search-container {
         padding: 0 20px;
+    }
+
+    .search-banner {
+        max-width: 100%;
+        margin-bottom: 15px;
     }
 
     .search-close {
