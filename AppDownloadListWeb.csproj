@@ -198,6 +198,8 @@
     <Content Include="Image\logo.png" />
     <Content Include="Image\section.png" />
     <Content Include="Image\section02.png" />
+    <Content Include="Image\section03.png" />
+    <Content Include="Image\section04.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
