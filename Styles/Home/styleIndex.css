@@ -1,19 +1,4 @@
-﻿/* 全局變量 */
-:root {
-    --primary-color: #000000;
-    --primary-color-light: #333333;
-    --primary-color-dark: #000000;
-    --secondary-color: #666666;
-    --border-color: #CCCCCC;
-    --dark-color: #000000;
-    --light-color: #FFFFFF;
-    --hover-color: #333333;
-    --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-    --border-radius: 8px;
-}
-
-/* banner */
+﻿/* banner */
 .hero-section {
     margin-top: 1.25rem; 
     margin-bottom: 3.75rem;

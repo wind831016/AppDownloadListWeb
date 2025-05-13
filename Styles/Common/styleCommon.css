@@ -1,5 +1,20 @@
 ﻿/* Common.css - 公用樣式 */
 
+/* 全局變量 */
+:root {
+    --primary-color: #000000;
+    --primary-color-light: #333333;
+    --primary-color-dark: #000000;
+    --secondary-color: #666666;
+    --border-color: #CCCCCC;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --hover-color: #333333;
+    --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+}
+
 /* 重置與基礎樣式 */
 * {
     box-sizing: border-box; /*將填充和邊框包含在元素的總寬度和高度中。*/
@@ -14,6 +29,11 @@ body {
     color: #333;
     background-color: #f8f9fa;
     padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 a {
@@ -327,6 +347,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 /* 響應式樣式 */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
     .col-md-6 {
         flex: 0 0 50%;
