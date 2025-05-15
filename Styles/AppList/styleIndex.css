@@ -4,25 +4,25 @@
     margin-bottom: 3rem;
 }
 
-.section-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-}
+    .hero-section .section-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+    }
 
-.section-item {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-}
+        .hero-section .section-inner .section-item {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
 
 /* carousel */
 .hero-carousel {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
     .hero-carousel .section-title {
@@ -62,11 +62,9 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-        .product:hover .product-image img {
-            transform: scale(1.05);
-        }
-
     .product .product-image {
+        height: 0;
+        padding-bottom: 75%; /* 固定圖片比例 */
         position: relative;
         overflow: hidden;
     }
@@ -76,34 +74,20 @@
         }
 
         .product .product-image img {
+            transform: scale(1.05);
             border-top-left-radius: var(--border-radius);
             border-top-right-radius: var(--border-radius);
             transition: transform 0.3s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
     .product .text-muted svg {
         margin-top: -5px;
-    }
-
-/* 遊戲輪播區樣式 */
-.hero-carousel {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-.banner-carousel .product .product-image {
-    height: 0;
-    padding-bottom: 75%; /* 固定圖片比例 */
-    position: relative;
-}
-
-    .banner-carousel .product .product-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
 .banner-carousel .product .app-info {
@@ -171,56 +155,56 @@
                 color: var(--light-color);
             }
 
-.list-carousel .app-info {
-    display: flex;
-    padding: 0.75rem;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-    .list-carousel .app-info:last-child {
-        border-bottom: none;
-    }
-
-    .list-carousel .app-info .app-rank {
-        margin-right: 0.75rem;
-        width: 24px;
-        height: 24px;
+    .hero-list-carousel .list-carousel .app-info {
         display: flex;
+        padding: 0.75rem;
         align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 0.875rem;
-        color: var(--secondary-color);
-        border-radius: 50%;
-        flex-shrink: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .list-carousel .app-info .app-icon {
-        width: 60px;
-        height: 60px;
-        margin-right: 0.75rem;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-        .list-carousel .app-info .app-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .hero-list-carousel .list-carousel .app-info:last-child {
+            border-bottom: none;
         }
 
+        .hero-list-carousel .list-carousel .app-info .app-rank {
+            margin-right: 0.75rem;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
 
-    .list-carousel .app-info .app-details {
-        flex-grow: 1;
+        .hero-list-carousel .list-carousel .app-info .app-icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 0.75rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+            .hero-list-carousel .list-carousel .app-info .app-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+        .hero-list-carousel .list-carousel .app-info .app-details {
+            flex-grow: 1;
+        }
+
+    .hero-list-carousel .list-carousel .list-item {
+        background-color: var(--light-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
     }
-
-.list-carousel .list-item {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-}
 
 /* 響應式設計 */
 @media (max-width: 1199.98px) {
@@ -234,8 +218,12 @@
         height: 220px;
     }
 
-    .banner-carousel .product .app-icon,
-    .list-carousel .app-info .app-icon {
+    .banner-carousel .product .app-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-list-carousel .list-carousel .app-info .app-icon {
         width: 50px;
         height: 50px;
     }
@@ -250,7 +238,10 @@
         margin-bottom: 2rem;
     }
 
-    .hero-carousel,
+    .hero-carousel {
+        margin-bottom: 2rem;
+    }
+
     .hero-list-carousel {
         margin-bottom: 2rem;
     }
