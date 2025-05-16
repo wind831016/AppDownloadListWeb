@@ -147,6 +147,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
+    <Compile Include="Controllers\Register\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -326,6 +327,7 @@
     <Content Include="Styles\Common\styleOwlCarousel.css" />
     <Content Include="Styles\Home\styleIndex.css" />
     <Content Include="Styles\Login\styleIndex.css" />
+    <Content Include="Styles\Register\styleIndex.css" />
     <Content Include="Styles\Shared\styleLayout_Backstage.css" />
     <Content Include="Styles\Shared\styleLayout.css" />
     <Content Include="Styles\Common\styleCommon.css" />
@@ -356,6 +358,7 @@
     <Content Include="Views\AppList\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_Backstage.cshtml" />
     <Content Include="Views\BackstageHome\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
