@@ -206,7 +206,6 @@
     <Content Include="Image\Space\02.svg" />
     <Content Include="Image\Space\03.svg" />
     <Content Include="Image\Space\04.svg" />
-    <Content Include="Image\Space\06.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
