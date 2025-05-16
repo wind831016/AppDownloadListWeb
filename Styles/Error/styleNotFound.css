@@ -1,0 +1,205 @@
+﻿/* 主要結構樣式 */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 畫面樣式 */
+.hero-block {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    margin: 20px 0;
+    /*background-color: red;*/
+}
+
+/* 左側面板樣式 */
+.hero-block__left-panel {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .hero-block__left-panel .hero-block__star {
+        position: absolute;
+        background-color: transparent; /* 確保中間是透明的 */
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 4px solid #3498db; /* 藍色邊框，粗細可調 */
+    }
+
+    .hero-block__left-panel .hero-block__smallStar {
+        position: absolute;
+        background-color: #3498db; /* 確保中間是透明的 */
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        animation: twinkle 3s infinite;
+    }
+
+    .hero-block__left-panel .hero-block__cross {
+        position: absolute;
+        animation: nodTwo 1s infinite ease-in-out;
+        transform-origin: center center;
+    }
+
+        .hero-block__left-panel .hero-block__cross::before,
+        .hero-block__left-panel .hero-block__cross::after {
+            content: "";
+            position: absolute;
+            background-color: #e74c3c;
+        }
+
+    .hero-block__left-panel .hero-block__planet {
+        position: absolute;
+        left: 50%;
+        width: 45%;
+        height: 45%;
+        bottom: 50%;
+        animation: nod 5s infinite ease-in-out;
+        transform-origin: center; /* 根據圖像中心點調整 */
+        z-index: 1;
+    }
+
+    .hero-block__left-panel .hero-block__astronaut {
+        position: absolute;
+        width: 45%;
+        height: 45%;
+        left: 5%;
+        bottom: 0;
+        z-index: 2;
+        animation: bob 3s infinite ease-in-out;
+    }
+
+/* 右側面板樣式 */
+.hero-block__right-panel {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .hero-block__right-panel h1 {
+        font-size: 7.5em;
+        margin: 15px 0px;
+        font-weight: bold;
+    }
+
+    .hero-block__right-panel h2 {
+        font-weight: bold;
+    }
+
+/* 動畫效果 */
+@keyframes nod {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes nodTwo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* 響應式斷點 */
+@media (max-width: 991.98px) {
+    .hero-block {
+        flex-direction: column;
+        height: auto;
+        max-width: 600px;
+    }
+
+    .hero-block__right-panel {
+        width: 100%;
+    }
+
+    .hero-block__left-panel {
+        width: 100%;
+        height: 250px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero-block {
+        margin: 10px 0;
+    }
+
+    .hero-block__left-panel {
+        height: 200px;
+        padding: 20px 15px;
+    }
+
+    .hero-block__right-panel {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-block__left-panel {
+        height: 180px;
+    }
+}

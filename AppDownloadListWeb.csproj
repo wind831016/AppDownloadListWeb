@@ -145,6 +145,7 @@
     <Compile Include="Controllers\AppList\AppListController.cs" />
     <Compile Include="Controllers\BackstageHome\BackstageHomeController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Error\ErrorController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
     <Compile Include="Controllers\Register\RegisterController.cs" />
@@ -201,6 +202,11 @@
     <Content Include="Image\section02.png" />
     <Content Include="Image\section03.png" />
     <Content Include="Image\section04.png" />
+    <Content Include="Image\Space\01.svg" />
+    <Content Include="Image\Space\02.svg" />
+    <Content Include="Image\Space\03.svg" />
+    <Content Include="Image\Space\04.svg" />
+    <Content Include="Image\Space\06.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -325,6 +331,7 @@
     <Content Include="Styles\AppList\styleIndex.css" />
     <Content Include="Styles\Common\styleSearch.css" />
     <Content Include="Styles\Common\styleOwlCarousel.css" />
+    <Content Include="Styles\Error\styleNotFound.css" />
     <Content Include="Styles\Home\styleIndex.css" />
     <Content Include="Styles\Login\styleIndex.css" />
     <Content Include="Styles\Register\styleIndex.css" />
@@ -359,6 +366,8 @@
     <Content Include="Views\Shared\_Layout_Backstage.cshtml" />
     <Content Include="Views\BackstageHome\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
