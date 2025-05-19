@@ -32,6 +32,7 @@
                 <div id="stars-container"></div>
                 <div id="small-stars-container"></div>
                 <div id="cross-container"></div>
+                <div id="small-cross-container"></div>
 
                 <div class="hero-block__planet">
                     <img class="img-fluid" src="~/Image/Space/06.svg" alt="planet">
@@ -57,6 +58,7 @@
             generateStars(10);
             generateSmallStars(5);
             generateCrosses(5);
+            generateSmallCrosses(10);
 
             // 添加窗口大小變化監聽器
             window.addEventListener('resize', handleResponsiveElements);
@@ -64,15 +66,21 @@
 
         function handleResponsiveElements() {
             const width = window.innerWidth;
-            const starsCount = width < 768 ? 5 : 10;
-            const smallStarsCount = width < 768 ? 2 : 5;
+            const starsCount = width < 768 ? 2 : 5;
+            const smallStarsCount = width < 768 ? 5 : 10;
+            const crossesCount = width < 768 ? 2 : 5;
+            const smallCrossesCount = width < 768 ? 5 : 10;
 
             // 清除並重新生成星星
             document.getElementById('stars-container').innerHTML = '';
             document.getElementById('small-stars-container').innerHTML = '';
+            document.getElementById('cross-container').innerHTML = '';
+            document.getElementById('small-cross-container').innerHTML = '';
 
             generateStars(starsCount);
             generateSmallStars(smallStarsCount);
+            generateCrosses(crossesCount);
+            generateSmallCrosses(smallCrossesCount);
         }
 
         function generateStars(count) {
@@ -157,7 +165,59 @@
                 cross.style.left = left + '%';
                 cross.style.width = size + 'px';
                 cross.style.height = size + 'px';
-                //cross.style.animationDelay = delay + 's';
+                cross.style.animationDelay = delay + 's';
+
+                crossesContainer.appendChild(cross);
+            }
+        }
+
+        function generateSmallCrosses(count) {
+            const crossesContainer = document.getElementById('small-cross-container');
+
+            for (let i = 0; i < count; i++) {
+                const cross = document.createElement('div');
+                cross.className = 'hero-block__smallCross';
+
+                const top = Math.random() * 50 + 5;     // 5-55%
+                const left = Math.random() * 90 + 5;    // 5-95%
+                const size = 20; 
+                const delay = Math.random() * 3;
+
+                const position = 'absolute';
+                const backgroundColor = 'blue';
+                const borderRadius = '4px';
+
+                // 設定 ::before（橫線）
+                const before = document.createElement('div');
+                before.style.position = position;
+                before.style.width = '100%';
+                before.style.height = Math.max(size * 0.15, 4) + 'px';
+                before.style.top = '50%';
+                before.style.left = '0';
+                before.style.transform = 'translateY(-50%)';
+                before.style.backgroundColor = backgroundColor;
+                before.style.borderRadius = borderRadius;
+
+                cross.appendChild(before);
+
+                // 設定 ::after（直線）
+                const after = document.createElement('div');
+                after.style.position = position;
+                after.style.width = Math.max(size * 0.15, 4) + 'px';
+                after.style.height = '100%';
+                after.style.left = '50%';
+                after.style.top = '0';
+                after.style.transform = 'translateX(-50%)';
+                after.style.backgroundColor = backgroundColor;
+                after.style.borderRadius = borderRadius;
+
+                cross.appendChild(after);
+
+                cross.style.top = top + '%';
+                cross.style.left = left + '%';
+                cross.style.width = size + 'px';
+                cross.style.height = size + 'px';
+                cross.style.animationDelay = delay + 's';
 
                 crossesContainer.appendChild(cross);
             }

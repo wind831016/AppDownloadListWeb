@@ -65,7 +65,18 @@ body {
         .hero-block__left-panel .hero-block__cross::after {
             content: "";
             position: absolute;
-            background-color: #e74c3c;
+        }
+
+    .hero-block__left-panel .hero-block__smallCross {
+        position: absolute;
+        animation: nodTwo 1s infinite ease-in-out;
+        transform-origin: center center;
+    }
+
+        .hero-block__left-panel .hero-block__smallCross::before,
+        .hero-block__left-panel .hero-block__smallCross::after {
+            content: "";
+            position: absolute;
         }
 
     .hero-block__left-panel .hero-block__planet {
