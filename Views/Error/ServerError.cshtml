@@ -1,6 +1,46 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout_Backstage.cshtml";
-    ViewData["Title"] = "首頁";
+    Layout = null;
+    ViewData["Title"] = "500";
 }
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppDownloadListWeb</title>
 
-<link rel="stylesheet" href="~/Styles/BackstageHome/styleIndex.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Styles/Common/styleCommon.css" />
+    <link rel="stylesheet" href="~/Styles/Error/styleServerError.css" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Javascript -->
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- 主內容 -->
+    <main class="container" role="main">
+        <div class="hero-block">
+            <!-- 左側面板 -->
+            <div class="hero-block__left-panel">
+               
+            </div>
+
+            <!-- 右側面板 -->
+            <div class="hero-block__right-panel col-md-6 align-self-center">
+                <h1>500</h1>
+                <h2>Opps! Internal Server Error.</h2>
+                <p>
+                    Unfortunately we're having trouble loading the page you are looking for.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

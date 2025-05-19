@@ -1,0 +1,104 @@
+﻿/* 主要結構樣式 */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 畫面樣式 */
+.hero-block {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+/* 左側面板樣式 */
+.hero-block__left-panel {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: red;
+}
+
+/* 右側面板樣式 */
+.hero-block__right-panel {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .hero-block__right-panel h1 {
+        font-size: 7.5em;
+        margin: 15px 0px;
+        font-weight: bold;
+    }
+
+    .hero-block__right-panel h2 {
+        font-weight: bold;
+    }
+
+/* 動畫效果 */
+
+
+/* 響應式斷點 */
+@media (max-width: 991.98px) {
+    .hero-block {
+        flex-direction: column;
+        height: auto;
+        max-width: 600px;
+    }
+
+    .hero-block__right-panel {
+        width: 100%;
+    }
+
+    .hero-block__left-panel {
+        width: 100%;
+        height: 250px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero-block {
+        margin: 10px 0;
+    }
+
+    .hero-block__left-panel {
+        height: 200px;
+        padding: 20px 15px;
+    }
+
+    .hero-block__right-panel {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-block__left-panel {
+        height: 180px;
+    }
+}
+    

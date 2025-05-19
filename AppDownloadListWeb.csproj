@@ -206,6 +206,8 @@
     <Content Include="Image\Space\02.svg" />
     <Content Include="Image\Space\03.svg" />
     <Content Include="Image\Space\04.svg" />
+    <Content Include="Image\Space\05.svg" />
+    <Content Include="Image\Space\06.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -330,6 +332,7 @@
     <Content Include="Styles\AppList\styleIndex.css" />
     <Content Include="Styles\Common\styleSearch.css" />
     <Content Include="Styles\Common\styleOwlCarousel.css" />
+    <Content Include="Styles\Error\styleServerError.css" />
     <Content Include="Styles\Error\styleNotFound.css" />
     <Content Include="Styles\Home\styleIndex.css" />
     <Content Include="Styles\Login\styleIndex.css" />
