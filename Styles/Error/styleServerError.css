@@ -34,8 +34,77 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: red;
+    /*background-color: red;*/
 }
+
+    /*.hero-block__left-panel div {
+        position: absolute;
+    }*/
+
+    .hero-block__left-panel .hero-block__left-panel__star {
+        position: absolute;
+        background-color: var(--border-color);
+        border-radius: 50%;
+        animation: twinkle 3s infinite;
+        z-index: 1;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__planet {
+        position: absolute;
+        width: 50%;
+        left: -15%;
+        bottom: -20%;
+        opacity: 0.5;
+        z-index: 2;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__starSigns {
+        position: absolute;
+        width: 15%;
+        left: 85%;
+        bottom: 80%;
+        opacity: 0.35;
+        z-index: 3;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__mars {
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        bottom: 30%;
+        z-index: 5;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__mars-circle {
+        position: absolute;
+        width: 45%;
+        height: 0;
+        padding-bottom: 45%;
+        border-radius: 50%;
+        /*background-color: rgba(255, 130, 130, 0.5);*/
+        left: 30%;
+        bottom: 30%;
+        z-index: 4;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__shootStar {
+        position: absolute;
+        width: 15%;
+        left: 5%;
+        bottom: 70%;
+        transform: rotate(5deg);
+        opacity: 0.35;
+        z-index: 3;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__UOF {
+        position: absolute;
+        width: 30%;
+        left: 35%;
+        bottom: 75%;
+        opacity: 0.5;
+        z-index: 4;
+    }
 
 /* 右側面板樣式 */
 .hero-block__right-panel {
@@ -56,7 +125,19 @@ body {
     }
 
 /* 動畫效果 */
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
 
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 /* 響應式斷點 */
 @media (max-width: 991.98px) {
@@ -75,6 +156,30 @@ body {
         height: 250px;
         padding: 30px 20px;
     }
+
+        .hero-block__left-panel .hero-block__left-panel__planet {
+            width: 25%;
+            left: -10%;
+            bottom: -30%;
+        }
+
+        .hero-block__left-panel .hero-block__left-panel__mars {
+            width: 30%;
+            left: 35%;
+            bottom: 20%;
+        }
+
+        .hero-block__left-panel .hero-block__left-panel__mars-circle {
+            width: 25%;
+            padding-bottom: 25%;
+            left: 40%;
+            bottom: 20%;
+        }
+
+        .hero-block__left-panel .hero-block__left-panel__UOF {
+            display: none; 
+        }
+
 }
 
 @media (max-width: 767.98px) {
@@ -93,6 +198,10 @@ body {
 
     .hero-block__right-panel {
         padding: 30px 20px;
+    }
+
+    .hero-block__left-panel .hero-block__left-panel__shootStar {
+        display: none;
     }
 }
 
