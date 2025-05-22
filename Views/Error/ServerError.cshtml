@@ -40,7 +40,7 @@
                 <div class="hero-block__left-panel__mars">
                     <img class="img-fluid" src="~/Image/Space/08.svg" alt="Mars">
                 </div>
-                <div class="hero-block__left-panel__mars-circle"></div>
+                <div class="hero-block__left-panel__mars-circle" id="hero-block__left-panel__mars-circle"></div>
                 <div class="hero-block__left-panel__shootStar">
                     <img class="img-fluid" src="~/Image/Space/01.svg" alt="shootStar">
                 </div>
@@ -62,6 +62,7 @@
      <script>
          document.addEventListener('DOMContentLoaded', function () {
              generateStars(20);
+             setTimeMarsCircleColors();
 
              // 添加窗口大小變化監聽器
              window.addEventListener('resize', handleResponsiveElements);
@@ -75,6 +76,7 @@
              document.getElementById('stars-container').innerHTML = '';
 
              generateStars(starsCount);
+             setTimeMarsCircleColors();
          }
 
          function generateStars(count) {
@@ -86,7 +88,7 @@
 
                  const top = Math.random() * 90 + 5;  
                  const left = Math.random() * 90 + 5; 
-                 const size = Math.random() * 2 + 2;  
+                 const size = Math.random() * 2 + 3;  
                  const delay = Math.random() * 3;
 
                  star.style.top = top + '%';
@@ -114,6 +116,7 @@
                  backgroundColor = "var(--primary-color)";
              }
 
+             circleContainer.style
              circleContainer.style.backgroundColor = backgroundColor;
          }
      </script>

@@ -166,14 +166,14 @@ body {
         .hero-block__left-panel .hero-block__left-panel__mars {
             width: 30%;
             left: 35%;
-            bottom: 20%;
+            bottom: 0%;
         }
 
         .hero-block__left-panel .hero-block__left-panel__mars-circle {
             width: 25%;
             padding-bottom: 25%;
             left: 40%;
-            bottom: 20%;
+            bottom: 0%;
         }
 
         .hero-block__left-panel .hero-block__left-panel__UOF {
